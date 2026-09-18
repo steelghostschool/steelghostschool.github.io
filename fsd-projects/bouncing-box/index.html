@@ -1,108 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Bouncing Box</title>
-    <script src="jquery.min.js"></script>
-    <style>
-      .box {
-        width: 70px;
-        height: 70px;
-        background-color: teal;
-        font-size: 300%;
-        text-align: center;
-        user-select: none;
-        display: block;
-        position: absolute;
-        top: 100px;
-        /* Change me! */
-        left: 0px;
-      }
+<html lang="en">
 
-      .board {
-        height: 100vh;
-      }
-    </style>
-    <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 1300px;
+      top: 600px;
 
-  <body class="board">
-    <!-- HTML for the box -->
-    <div class="box">?</div>
+    }
+  </style>
+</head>
 
-    <script>
-      (function () {
-        "use strict";
-        /* global jQuery */
+<body>
 
-        //////////////////////////////////////////////////////////////////
-        /////////////////// SETUP DO NOT DELETE //////////////////////////
-        //////////////////////////////////////////////////////////////////
-
-        var box = jQuery(".box"); // reference to the HTML .box element
-        var board = jQuery(".board"); // reference to the HTML .board element
-        var boardWidth = board.width(); // the maximum X-Coordinate of the screen
-
-        // update the boardWidth variable when the window is resized
-        jQuery(window).on("resize", function () {
-          boardWidth = board.width();
-        });
-
-        // Every 50 milliseconds, call the update Function (see below)
-        setInterval(update, 50);
-
-        // Every time the box is clicked, call the handleBoxClick Function (see below)
-        box.on("click", handleBoxClick);
-
-        // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
-          box.css("left", newPositionX);
-        }
-
-        // changes the text displayed on the Box
-        function changeBoxText(newText) {
-          box.text(newText);
-        }
-
-        //////////////////////////////////////////////////////////////////
-        /////////////////// YOUR CODE BELOW HERE /////////////////////////
-        //////////////////////////////////////////////////////////////////
-
-        // TODO 2 - Variable declarations
+  <img id="box"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4PTUfp2VNvAevfZi5lHS2XuGMdKP9ujqfteDcJFZ3bxZSwFrISvbp4rM:https://www.shipducky.com/cdn/shop/products/Instagrampost-1a.jpg%3Fv%3D1660097941%26width%3D1946&s=10">
 
 
+</body>
 
-
-
-        /**
-         * This Function will be called 20 times/second.
-         * Each time it is called, it should move the Box to a new location.
-         * If the box drifts off the screen, turn it around!
-         */
-        function update() {
-
-        
-
-          
-        }
-
-        /**
-         * This Function will be called each time the box is clicked.
-         * Each time it is called, it should perform each of the following actions:
-         * - increase the points total
-         * - increase the speed
-         * - move the box to the left side of the screen.
-         */
-        function handleBoxClick() {
-
-
-
-
-        }
-
-
-        
-      })();
-    </script>
-  </body>
 </html>
+<script>
+  let x = 450
+  let y = 200
+  let directionX = -1
+  let directionY = -1
+
+
+
+  setInterval(movebox,12)
+
+  document.getElementById("box").style.top = y + "px"
+  document.getElementById("box").style.left = x + "px"
+
+  function movebox() {
+    x = x + directionX
+    y = y + directionY
+    document.getElementById("box").style.left = x + "px"
+    document.getElementById("box").style.top = y + "px"
+  
+if(x < 250){
+directionX = 1
+}
+if(y < 0){
+  
+directionY = 1
+}
+if(y > 620){
+directionY = -1
+      }
+ if (x > 600){
+  directionX = -1
+ }
+    }
+    //change the variables from adding negatives to adding positives to change direction once its done//
+
+</script>
