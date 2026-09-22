@@ -35,8 +35,10 @@ $(function () {
     createPlatform(600, 660, 20, 290);
     createPlatform(450, 650, 10, 180);
     createPlatform(1050, 400, 50, 50, "red");
-    createPlatform(50, 200, 105, 10, "pink");
-    createPlatform(900, 500, 20, 20);
+    createPlatform(625, 650, 10, 180);
+        createPlatform(725, 650, 10, 180);
+
+
 
 
     // TODO 3 - Create Collectables
