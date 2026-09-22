@@ -223,7 +223,6 @@ createPlatform(100, 20, 10, 10, "lime"); // bright green for a finished platform
 ```
 
 > You can leave the color parameter blank to use the default grey color while figuring out the desired position of your platform. Once you’re happy with the placement, change the color to something else to make it clear that it is finished.
-
 ---
 
 <table style="width: 80%; margin-left: auto; margin-right: auto; border-collapse: collapse; margin-top: 15px; background-color: #2c2c2c; border: 1px solid #444; border-radius: 8px; overflow: hidden;">
